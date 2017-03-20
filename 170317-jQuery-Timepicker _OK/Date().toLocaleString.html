@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="jquery-timepicker-1.3.5/jquery.timepicker.min.js"></script>	
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+	<style>
+		input {
+			height: 25px;
+		}
+		input {
+		    background:#fff;
+		    border:dashed 1px #969696;
+		    /*box-shadow*/
+		    -webkit-box-shadow:2px 2px 5px #E8E8E8 inset;
+		    -moz-box-shadow:2px 2px 5px #E8E8E8 inset;
+		    box-shadow:2px 2px 5px #E8E8E8 inset;
+		}
+	</style>
+</head>
+<body>
+
+	<div align="center">
+	<h2 >Timepicker</h2>
+	<form>
+		<label for="setDate" class="icon-calendar" > Set your date
+        <input type="date" value="2017-03-16" name="setDate" id="setDate" required="required" />
+        <hr>
+        
+    </form>
+	</div>
+	<script>
+		
+		$(document).ready( function() {
+		    $('#setDate').val(new Date().toLocaleString());
+		});​	
+	</script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>	
+</body>
+</html>
