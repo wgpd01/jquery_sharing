@@ -15,7 +15,7 @@
 	<li> git push <br>
 	<li> 輸入你的 github 帳號密碼 <br>
 	<li> 請在 GitHub 網站確認「Ｂ數據庫」已更新（「Ａ數據庫」這時還沒變，這是正常現象）
-	<ol>
+	</ol>
 5. 在 GitHub 網站，「Ｂ數據庫」，點按 New Pull Request 按鈕，接著點按「Create pull request」按鈕，確認留言內容無誤後，再點按「Create pull request」按鈕。(最後那個 Close pull request 按鈕，不要點)
 6. 發一封 e-mail 或 Messager 訊息給錢老師
 7. 錢老師收到通知後，操作「Ａ數據庫」確認異動，於是，你的資料夾就會出現在「Ａ數據庫」
