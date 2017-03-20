@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="jquery-timepicker-1.3.5/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<style>
+		input {
+			height: 25px;
+		}
+		input {
+		    background:#fff;
+		    border:dashed 1px #969696;
+		    /*box-shadow*/
+		    -webkit-box-shadow:2px 2px 5px #E8E8E8 inset;
+		    -moz-box-shadow:2px 2px 5px #E8E8E8 inset;
+		    box-shadow:2px 2px 5px #E8E8E8 inset;
+		}
+		.container {
+			width: 920px;
+			margin: 0 auto;
+			/*text-align: center;*/
+		}
+		em {
+			font-size: 18px;
+			font-weight: 700;
+			color: deeppink;
+		}
+		button:nth-child(n+2) {
+			border: 3px solid cyan ;
+			background-color: #fff;
+			color: #fa0;
+			display: inline-block;
+			margin : 10px;
+		}
+		#list li:nth-child(n+1) {
+			background-color: rgba(80,255,180,0.4);
+
+		}
+	
+
+	</style>
+</head>
+<body>
+
+	<div align="center">
+	<h2 >jQuery Plugin</h2> 
+	<h3><em>Timepicker</em></h3>
+	
+	<div class="container">
+		<h4>使用步驟如下：(參考網址：http://timepicker.co/#)<br/><br/>
+		<div id="accordion">
+			<h3>第一步</h3>
+	        <div><p>引用jQuery</p>
+	        </div>
+	        <h3>第二步</h3>
+	        <div><p>在你指定的<em>input</em>元素內新增<em>timepicker類別<em></p>
+	        </div>
+	        <h3>第三步</h3>
+	        <div><p>安裝cdnjs</p><img src="./images/170318-2.jpg" width="100%" />
+	        </div>
+	        <h3>第四步</h3>
+	        <div><p>使用以下程式碼初始化本插件，並複製到&lt;script&gt;區域內</p><img src="./images/170318.jpg" width="500px"  />
+	        </div>
+	        <h3>第五步</h3>
+	        <div><p>設定客製化(Configuration)配置，並複製到&lt;script&gt;區域內</p><img src="./images/170318-3.jpg" width="100%"  />
+	        </div>
+	</div>
+	</div>
+	<hr>
+	<form>
+		<label for="setDate" class="icon-calendar" > Set your date
+        <input type="date" value="2017-03-17" name="setDate" id="setDate" />
+        <br/>
+        <label for="setTime" class="icon-bell" style="display:inline-block;margin-top:10px; " > Set your time
+        </label>
+        <input class="timepicker" name="setTime" id="setTime" />
+    </form>
+	</div>
+	<script>
+	    $("#accordion").accordion({
+	    	header:"h3",
+	    	heightStyle: "content"
+	    });
+	
+		$(document).ready(function(){
+		    $('input.timepicker').timepicker({});
+		});
+		$('input.timepicker').timepicker({
+		    timeFormat: 'h:mm p',
+		    interval: 30,
+		    minTime: '11:00am',
+		    maxTime: '9:00pm ',
+		    defaultTime: '11:30am',
+		    startTime: '11:00',
+		    dynamic: false,
+		    dropdown: true,
+		    scrollbar: true
+		});
+
+		function step1(){
+			list.innerHTML += '<li>'+"引用jQuery"+'<em><pre>jquery.js</em>'+'</li><br/><button onclick="step2()">下一步</button>';	
+		};
+		function step2(){
+			list.innerHTML += '<li>'+'在你指定的<em>input</em>元素內新增<em>timepicker類別<em>'+'</li><br/><button onclick="step3()">下一步</button>';	
+		};
+		function step3(){
+			list.innerHTML += '<li>'+'安裝cdnjs：'+'</li><br/><img src="./images/170318-2.jpg" width="100%"  /><br/><button onclick="step4()">下一步</button>';	
+		};
+		function step4(){
+			list.innerHTML += '<li>'+'使用以下程式碼初始化本插件：'+'</li><br/><img src="./images/170318.jpg" width="500px"  /><br/><button onclick="step5()">下一步</button>';	
+		};
+		function step5(){
+			list.innerHTML += '<li>'+'本插件設定檔(Configuration)配置：'+'</li><br/><img src="./images/170318-3.jpg" width="100%"  /><br/><button onclick="toURL()">GO</button>';	
+		};
+		function toURL(){
+			window.open("http://timepicker.co/#",'_blank');
+		}
+	</script>
+	<script src="jquery-timepicker-1.3.5/jquery.timepicker.min.js">
+		
+	</script>	
+</body>
+</html>
